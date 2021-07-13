@@ -8,9 +8,8 @@
     <style>
    
     .back {
-        position: relative;
+    position: relative;
     background: transparent;
-    
     padding: 10px;
     margin: 2px;
     cursor: pointer;
@@ -21,7 +20,6 @@
 .shadow {
     position: absolute;
     top: 0;
-    
     left: 0;
     width: 100%;
     height: 100%;
@@ -30,26 +28,18 @@
     transform: translate(2px);
     
 }
-/* .edge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  background: hsl(340deg 100% 32%);
-} */
+
 .front {
     display: block;
     position: relative;
     padding: 12px 41px;
     border-radius: 12px;
     font-size: 1.25rem;
-    border:1px solid rgb(175, 165, 165);
+    border:2px solid rgb(175, 165, 165);
     background: hsl(345deg 0% 73%);
     transform: translate(4px,-1px);
-    /* box-shadow: 0px 1px 0px 3px; */
-    box-shadow: 0 1px 1px rgba(0,0,0,0.25), 
+    /* box-shadow: 0px 1px 0px 3px;    This box shadow makes the shadow look very dark  */
+    box-shadow: 0 1px 1px rgba(0,0,0,0.25),  /*This box shadow will help in making smooth background*/
               0 2px 2px rgba(0,0,0,0.20), 
               0 4px 4px rgba(0,0,0,0.15), 
               0 8px 8px rgba(0,0,0,0.10),
@@ -60,29 +50,19 @@
 
     </style>
 </head>
+<!-- We are having two layers above of the button.They are shadow and front. Front is the layer on which we will be able to see the text 
+Shadow layer is just a layer which will depict itself as if it is shadow of the front -->
 <body>
     
     
-    
-    <button class="back ">
+    <!-- It will be at the utmost bottom class -->
+    <button class="back ">    
+        <!-- Shadow class is used to show shadow for front class element   -->
         <span class="shadow"></span>
-        <span class="edge"></span>
-        <span class="front">
+        <!-- The below front is layer which we are going to add in front -->
+        <span class="front"> 
             &#9734 CHECKOUT &#9734
         </span>
       </button>
 </body>
 </html>
-<!-- .btn{
-    /* border:2px solid black; */
-    margin:0px;
-    height: 66px;
-    width: 187px;
-        
-text-shadow: 0px  -1px 0px rgba(12, 9, 231, 0.527);
-    position:absolute;
-    left:30px;
-    border: 3px solid grey;
-    border-radius: 20px;
-    box-shadow: 0px 0px 0px 1px rgb(41, 230, 24) inset;
-} -->
